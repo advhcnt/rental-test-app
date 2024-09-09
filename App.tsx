@@ -6,7 +6,7 @@ import tw from 'twrnc';
 
 export default function App() {
     return (
-        <SafeAreaView style={tw`bg-gray-100 flex-1`}>
+        <SafeAreaView style={tw`bg-white flex-1 pt-8`}>
             <ScrollView>
                 <SearchBar />
                 <PropertyList />

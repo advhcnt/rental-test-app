@@ -27,11 +27,11 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ title, description, price, 
     };
 
     return (
-        <View style={tw`bg-white p-4 mb-4 rounded-lg shadow-lg`}>
+        <View style={tw`bg-white pb-4 mb-4 rounded-lg`}>
             <TouchableOpacity onPress={toggleModal}>
                 <Image
                     source={{ uri: image }}
-                    style={tw`h-40 w-full rounded-lg`}
+                    style={tw`h-40 w-full rounded-lg bg-white`}
                     resizeMode="cover"
                 />
                 <View style={tw`flex-row justify-between px-2 py-1 absolute top-2 w-full`}>
@@ -42,6 +42,15 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ title, description, price, 
                         <Text style={tw`text-white`}>il y a environ 19 heures</Text>
                     </View>
                 </View>
+                <TouchableOpacity
+                   onPress={toggleModal}
+                    style={tw`absolute bottom-2 left-2 py-2 px-3 rounded-full bg-white bg-opacity-80`}>
+                    <FontAwesome
+                        name={'user'}
+                        size={22}
+                        color={'gray'}
+                    />
+                </TouchableOpacity>
                 <TouchableOpacity
                     onPress={toggleFavorite}
                     style={tw`absolute bottom-2 right-2 p-2 rounded-full bg-gray-900 bg-opacity-50`}>

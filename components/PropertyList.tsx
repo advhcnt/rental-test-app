@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, ScrollView } from 'react-native';
+import { Text, ScrollView, View } from 'react-native';
 import tw from 'twrnc';
 import PropertyCard from "./PropertyCard";
 
@@ -17,7 +17,7 @@ const PropertyList = () => {
             title: 'Appart 13',
             description: '2 Chambres • 2 Salles de bain • 120 m² • Appartement • À louer',
             price: '120000 F CFA',
-            image: 'https://img.freepik.com/psd-premium/maison-moderne-isolee-fond-transparent_1214022-11463.jpg?w=1380',
+            image: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         },
         // Add more property data
     ];
@@ -25,17 +25,20 @@ const PropertyList = () => {
     return (
         <ScrollView style={tw`p-4`}>
             <Text style={tw`text-xl font-bold mb-4`}>17 Propriétés</Text>
-            {properties.map((property) => (
-                <PropertyCard
-                    key={property.id}
-                    title={property.title}
-                    description={property.description}
-                    price={property.price}
-                    image={property.image}
-                    latitude={37.78825}
-                    longitude={-122.4324}
-                />
-            ))}
+          
+                {properties.map((property) => (
+                    <PropertyCard
+                        key={property.id}
+                        title={property.title}
+                        description={property.description}
+                        price={property.price}
+                        image={property.image}
+                        latitude={37.78825}
+                        longitude={-122.4324}
+                    />
+                ))}
+          
+
         </ScrollView>
     );
 };
